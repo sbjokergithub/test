@@ -3,31 +3,35 @@ package server;
 import java.util.*;
 
 public class logSet {
-    Set[] s = new Set[3];
+//    HashSet[] s = new HashSet[3];
+    ArrayList<HashSet<Integer>> s;
     int block_n;
 
     public logSet() {
-        for (int i=0; i<3; i++)
-            s[i] = new HashSet<Integer>();
+        s = new ArrayList<>();
+        for (int i=0; i<3; i++) {
+            s.add(new HashSet<Integer>());
+        }
+            //s[i] = new HashSet<Integer>();
         block_n = 0;
     }
 
     public int size(int t){
-        return s[t].size();
+        return s.get(t).size();
     }
 
     public void add(int t, int num){
         //System.out.println("add" + t + ":" + num);
-        s[t].add(num);
+        s.get(t).add(num);
     }
 
     public void clear(int t){
-        s[t].clear();
+        s.get(t).clear();
     }
 
     public void clearAll(){
         for (int i=0; i<3; i++)
-            s[i].clear();
+            s.get(i).clear();
         this.addBlock();
     }
 
