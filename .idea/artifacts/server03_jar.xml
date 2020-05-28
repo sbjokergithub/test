@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="server03:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/server03_jar</output-path>
+    <root id="archive" name="papre.jar">
+      <element id="module-output" name="papre" />
+    </root>
+  </artifact>
+</component>
